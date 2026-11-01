@@ -1,0 +1,17 @@
+   name: zipbuild
+   on: workflow_dispatch
+   jobs:
+     build:
+       runs-on: ubuntu-24.04
+       steps:
+         - uses: actions/checkout@v4
+         - run: unzip -o narutohover-project.zip -d proj
+         - uses: actions/setup-java@v4
+           with:
+             java-version: '25'
+             distribution: 'microsoft'
+         - run: chmod +x proj/gradlew && cd proj && ./gradlew build
+         - uses: actions/upload-artifact@v4
+           with:
+             name: Artifacts
+             path: proj/build/libs/
