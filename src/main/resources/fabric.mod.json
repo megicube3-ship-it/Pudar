@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "playsound",
+  "version": "${version}",
+  "name": "Play Sound Keybind",
+  "description": "Tekan satu keybind untuk memutar satu suara custom (hanya terdengar olehmu).",
+  "authors": ["you"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.playsound.PlaySoundClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
