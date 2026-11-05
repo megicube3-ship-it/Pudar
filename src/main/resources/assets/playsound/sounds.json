@@ -1,0 +1,7 @@
+{
+  "custom": {
+    "sounds": [
+      { "name": "playsound:custom", "stream": true }
+    ]
+  }
+}
