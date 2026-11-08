@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "nolavalight",
+  "version": "1.1",
+  "name": "No Lava Cauldron Light",
+  "description": "Client-only: lava cauldrons no longer emit light on your screen (vanilla lighting and Iris shaders). The lava texture stays. Server and other players are unaffected.",
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": { "client": [ "id.nolavalight.NoLavaLightClient" ] },
+  "mixins": [ { "config": "nolavalight.mixins.json", "environment": "client" } ],
+  "depends": { "fabricloader": ">=0.15.0", "minecraft": "1.21.11" },
+  "suggests": { "iris": "*" }
+}
