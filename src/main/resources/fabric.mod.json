@@ -1,1 +1,19 @@
-
+{
+  "schemaVersion": 1,
+  "id": "enchantborder",
+  "version": "${version}",
+  "name": "Enchant Hotbar Border",
+  "description": "Menampilkan border ungu bergradasi di slot hotbar yang berisi item ber-enchant.",
+  "authors": ["you"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.enchantborder.EnchantBorderClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
