@@ -1,21 +1,34 @@
-name: Build
+name: build
 on:
-  workflow_dispatch:
   push:
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # Bentuk ulang folder src/ dari file datar.
+      # Nama file "src__main__java__id__stev__X.java" -> "src/main/java/id/stev/X.java"
+      - name: Rebuild folder structure
+        run: |
+          shopt -s nullglob
+          for f in src__*; do
+            dest="${f//__//}"
+            mkdir -p "$(dirname "$dest")"
+            mv "$f" "$dest"
+          done
+          find src -type f | sort
+
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 21
       - uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: 9.2.1
+          gradle-version: 9.2.0
       - run: gradle build --no-daemon
       - uses: actions/upload-artifact@v4
         with:
-          name: enchant-hotbar-border
-          path: build/libs/*.jar
+          name: stevmenu
+          path: build/libs/stevmenu-*.jar
