@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "stevmenu",
+  "version": "${version}",
+  "name": "Stev Menu",
+  "description": "Semua toggle dalam 1 menu: hide hand, outline block, scoreboard, chat, bossbar, hologram, torch lock, no lava light, cuaca, waktu. Buka dengan /stevmenu",
+  "authors": ["Stev"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": { "client": ["id.stev.stevmenu.StevMenuMod"] },
+  "mixins": [ { "config": "stevmenu.mixins.json", "environment": "client" } ],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

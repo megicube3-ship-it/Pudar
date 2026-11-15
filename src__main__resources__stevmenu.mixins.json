@@ -1,0 +1,12 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "id.stev.stevmenu.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "GuiMixin", "HandMixin", "OutlineMixin", "ChatMixin", "BossBarMixin",
+    "EntityLabelMixin", "TextDisplayMixin", "LevelMixin", "WeatherRenderMixin",
+    "ClientLevelMixin", "ClientPacketMixin", "IrisBlockMapMixin", "IrisWorldSettingsMixin"
+  ],
+  "injectors": { "defaultRequire": 0 }
+}
